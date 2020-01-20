@@ -11,11 +11,19 @@ let mediaRecorder = null
 let recordedData = []
 let localBlobs
 
+if (navigator.mediaDevices) {
+  alert ("Media device supported");
+}
+else {
+  alert ("Media device not supported");
+}
+
 
 // プレビューの処理
 startButton.addEventListener("click", () => {
   navigator.mediaDevices.getUserMedia({
-    video: true,
+    // video: true,
+    video: { facingMode: { exact: "environment" } },
     audio: true
   })
   .then(stream => {
