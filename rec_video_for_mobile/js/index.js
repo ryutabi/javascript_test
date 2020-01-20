@@ -43,7 +43,7 @@ const startRecording = () => {
   try {
     mediaRecorder = new MediaRecorder(window.stream, options)
   } catch (e) {
-    console.error(e)
+    alert(e)
     return
   }
 
