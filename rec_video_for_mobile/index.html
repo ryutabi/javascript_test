@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Video Record</title>
+</head>
+<body>
+
+  
+  <div class="video_record__container">
+    <!-- プレビュー -->
+    <div class="preview__container">
+      <button id="startButton">スタート</button>
+      <h2>プレビュー</h2>
+      <video id="preview" width="160" height="120" autoplay muted></video>
+    </div>
+  
+    <!-- 録画 -->
+    <div class="record__container">
+      <button id="recStart" onclick="startRecording()">録画スタート</button>
+      <button id="recStop" onclick="stopRecording()">録画ストップ</button>
+      <button id="playVideo" onclick="videoPlay()">再生</button>
+      <button id="download" onclick="downloadVideo()">保存</button>
+      <h2>録画したデータ</h2>
+      <video id="recordedVideo" width="320" height="240"></video>
+    </div>
+
+    <div>
+      <button onclick="uploadBlob()">Upload Firebase</button>
+    </div>
+
+  </div>
+  
+
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+  <script src="js/fb.js"></script>
+  <script src="js/fb_main.js"></script>
+
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
