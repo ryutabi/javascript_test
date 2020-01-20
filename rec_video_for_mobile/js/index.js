@@ -31,7 +31,7 @@ startButton.addEventListener("click", () => {
     window.stream = stream
   })
   .catch(e => {
-    console.error(e)
+    alert(e)
   })
 });
 
@@ -78,7 +78,7 @@ const downloadVideo = () => {
   document.body.appendChild(a)
   a.style.display = "none"
   a.href = url
-  a.download = "hogehoge.webm" // ファイル名
+  a.download = "hoge.webm" // ファイル名
   a.click()
   // 100ミリ秒後にエレメントを消す
   setTimeout(() => {
